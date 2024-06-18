@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <title>Lung Cancer Prediction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: #4B79A1;
+      background: linear-gradient(to right, #283E51, #4B79A1);
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    header {
+      position: absolute;
+      top: 20px;
+      text-align: center;
+      width: 100%;
+    }
+    #logo h2 {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      max-width: 600px;
+      margin: auto;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .container:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    }
+    .form-group h2 {
+      color: #4B79A1;
+      font-weight: bold;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .form-group h3 {
+      color: #283E51;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      color: #4B79A1;
+      font-weight: bold;
+      font-size: 1.2em;
+      text-align: left;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .form-group .file-input {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .form-group .file-input label {
+      flex: 1;
+    }
+    .form-group .file-input input[type="file"] {
+      flex: 3;
+      border: 2px solid #4B79A1;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 1em;
+      width: 100%;
+      transition: border-color 0.3s ease;
+    }
+    .form-group .file-input input[type="file"]:focus {
+      border-color: #283E51;
+    }
+    .form-group .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .form-group .btn-container button {
+      flex: 1;
+      margin: 0 10px;
+      padding: 15px 0;
+      border: 2px solid #4B79A1;
+      border-radius: 5px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: #4B79A1;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .form-group .btn-container button:hover {
+      background-color: #283E51;
+    }
+    .form-group .btn-container .btn:hover {
+      opacity: 0.8;
+    }
+
+     .btn-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .btn-submit, .btn-reset {
+      padding: 12px 20px;
+      font-size: 1.2em;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn-submit {
+      background-color: #4B79A1; /* Blue color */
+      margin-right: 10px;
+    }
+    .btn-reset {
+      background-color: #e74c3c; /* Red color */
+    }
+    .btn-submit:hover, .btn-reset:hover {
+      background-color: #283E51; /* Darker shade on hover */
+    }
+    .cpy-right {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .cpy-right a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+    .animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+    @keyframes fadeInUp {
+      from {
+        transform: translate3d(0, 40px, 0);
+        opacity: 0;
+      }
+      to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+    .fadeInUp {
+      animation-name: fadeInUp;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="logo">
+      <h2>Lung Cancer Prediction From Histopathological Images Using Deep Learning Techniques</h2>
+    </div>
+  </header>
+  <div class="container animated fadeInUp">
+    <section class="contact">
+      <h2 class="title-w3 text-bl text-center font-weight-bold">PREDICTION</h2>
+      <form action="/predict" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <h3>Upload Tissue Image</h3>
+          <div class="file-input">
+            <label for="file">Choose file:</label>
+            <input type="file" id="file" name="file" class="form-control" required />
+          </div>
+        </div>
+         <div class="btn-container">
+        <button type="submit" class="btn-submit">Submit</button>
+        <button type="reset" class="btn-reset">Reset</button>
+      </div>
+      </form>
+    </section>
+  </div>
+  <div class="cpy-right">
+    <p>All rights reserved | Design by <a href="#">Gayathri</a></p>
+  </div>
+</body>
+</html>

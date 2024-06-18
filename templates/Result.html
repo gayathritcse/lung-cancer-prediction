@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+  <title>Lung Disease Prediction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: #4B79A1;
+      background: linear-gradient(to right, #283E51, #4B79A1);
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    header {
+      position: absolute;
+      top: 20px;
+      text-align: center;
+      width: 100%;
+    }
+    #logo h1 {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+      margin: 0;
+    }
+    h4 a {
+      color: #FFD700;
+      text-decoration: none;
+      font-size: 1.5em;
+      margin-top: 10px;
+      display: inline-block;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    }
+    h4 a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      width: 450px;
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .container:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+    }
+    .form-group h2 {
+      color: #4B79A1;
+      font-weight: bold;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .form-group h3 {
+      color: #283E51;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+    }
+    .form-group h4 {
+      color: #4B79A1;
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    .cpy-right {
+      background: #333;
+      color: #fff;
+      padding: 10px 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+    .cpy-right a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+    .animated {
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+    @keyframes fadeInUp {
+      from {
+        transform: translate3d(0, 40px, 0);
+        opacity: 0;
+      }
+      to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+      }
+    }
+    .fadeInUp {
+      animation-name: fadeInUp;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="logo">
+      <h1>Lung Cancer Prediction Result</h1>
+    </div>
+    <h4><a href="/">Home</a></h4>
+  </header>
+  <div class="container animated fadeInUp">
+    <div>
+      <section class="contact">
+        <div class="form-group">
+          <h2>Accuracy reaches up to 97%</h2>
+          <h3>{{result}}</h3>
+          <h4>MEDICINE</h4>
+          <div style="color: black;">{{fer}}</div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div class="cpy-right">
+    <p>All rights reserved | Design by Gayathri</p>
+  </div>
+</body>
+</html>
