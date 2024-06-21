@@ -38,8 +38,3 @@ Here are some screenshots of the application:
 
 
 You're welcome! If you have any more questions or need further assistance, feel free to ask. Good luck with your Lung Cancer Prediction project!
-## Contact
-- **Author**: [Your Name]
-- **Email**: [your-email@example.com]
-- **GitHub**: [your-username](https://github.com/your-username)
-
